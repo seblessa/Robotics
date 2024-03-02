@@ -8,4 +8,11 @@ from controllers.utils import cmd_vel
 
 robot: Robot = Robot()
 
-# TODO
+# v = r*w
+
+v = 0.1
+r = 0.125
+w = v/r
+
+cmd_vel(robot, v, w)
+robot.step(50000)  # 1000 ms
